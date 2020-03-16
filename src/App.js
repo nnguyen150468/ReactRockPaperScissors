@@ -1,30 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {useState} from 'react';
 import './App.css';
-import Box from './components/Box'
-import ChoiceCard from './components/ChoiceCard'
+import ChoiceCard from './components/ChoiceCard';
 
 const choices = {
-  rock: "https://opengameart.org/sites/default/files/forum-attachments/very%20simple%20rock_0.png",
-  paper: "http://pngimagesfree.com/Paper/Thumb/blank-note-paper-free-clipa.png",
-  scissors: "http://www.pngmart.com/files/1/Scissors-PNG-Pic.png"
+  rock: 'https://media.tinthethao.com.vn/files/news/2018/01/23/theo-chan-dwayne-johnson-the-rock-mot-ngay-tap-nguc-122013.jpg',
+  paper: 'https://pbs.twimg.com/media/DWsJ9z7X0AAxl2z.jpg',
+  scissors: 'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/still10-preview-1522353855.jpg'
 }
 
-
 function App() {
+  
   return (
     <div className="App">
       <ChoiceCard 
-        title="You" 
-        winner={false} 
-        imgURL={choices.rock}/>
+      name="You"
+      imgURL={choices.rock}
+      winner={false}/>
       <ChoiceCard 
-        title="Computer" 
-        winner={true} 
-        imgURL={choices.paper}/>
+      name="Computer"
+      imgURL={choices.paper}
+      winner={true}/>
     </div>
   );
 }
-
 
 export default App;
