@@ -4,22 +4,27 @@
   justify-content: center;
   background-color: #F6E4F6;
   min-height: 100vh;
+  text-align: center;
 }
+
 
 h1{
   font-size: 60px;
 }
 
 .choice-card {
+  display: flex;
   flex: 1;
   border-radius: 25px;
   text-align: center;
-  margin: 100px;
+  margin: 25px;
   font-size: 2.5em;
+  justify-content: space;
   background-color: white;
+  border: 10px solid black;
   padding: 0 40px;
-  font-weight: 300px;
   flex-direction: column;
+  font-weight: 300px;
   align-items: center;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
@@ -40,3 +45,11 @@ h1{
   height: 250px;
 }
 
+button {
+  align-items: center;
+}
+
+ul {
+  text-decoration: none;
+  list-style-type: none;
+}
