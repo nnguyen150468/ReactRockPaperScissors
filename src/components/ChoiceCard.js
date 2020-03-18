@@ -38,7 +38,7 @@ function ChoiceCard(props){
             <h1>{props.title}</h1>
             <img class="card-img" src={props.imgURL || DEFAULT_IMG} alt={props.title}></img>
             <h3>{props.name}</h3>
-            <h2>{result+'!'}</h2>
+            <h2>{(!result)? 'Start game!' : result+'!'}</h2>
         </div>
     )
 }
