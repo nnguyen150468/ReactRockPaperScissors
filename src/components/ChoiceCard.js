@@ -3,32 +3,42 @@ import React from 'react'
 const DEFAULT_IMG = 'https://www.esquireme.com/sites/default/files/styles/full_img/public/images/2017/05/29/rock_paper_scissors__2x.png?itok=MW68w59E'
 
 function ChoiceCard(props){
-    const won = props.title === props.previousWinner;
-    let className;
-    const hasPreviousGame = 
-        props.previousWinner === "Computer" || props.previousWinner === "You";
-    if (hasPreviousGame){
-        className = won? "winner" : "loser";
-    }
+    // let result;
+    // let prompt ='';
+    // if(props.title === "Computer"){
+    //     if(props.win === "Tie"){
+    //         result = "Tie";
+    //         prompt = "tie!";
+    //     } else if (props.win === "loser"){
+    //         result = "loser";
+    //         prompt = "lost!";
+    //     } else if (props.win === "winner"){
+    //         result = "winner";
+    //         prompt = "won!";
+    //     }
+    // } else {
+    //     result = props.win
+    // }
 
-    let prompt;
-    if (won){
-        prompt = "won!";
-        className = won? "winner" : "loser";
-    } else if (props.previousWinner === "Tie"){
-        prompt = "Tie";
-    } else if (props.previousWinner === null){
-        prompt = "Start";
+    let result;
+    if(props.title === "Computer"){
+        if(props.win === "tie"){
+            result = "tie";
+        } else if (props.win === "won"){
+            result = "lost";
+        } else if (props.win === "lost"){
+            result = "won";
+        } 
     } else {
-        prompt = "lost!";
+        result = props.win;
     }
 
     return (
-        <div className={`choice-card ${className}`}>
+        <div className={`choice-card ${result}`}>
             <h1>{props.title}</h1>
             <img class="card-img" src={props.imgURL || DEFAULT_IMG} alt={props.title}></img>
             <h3>{props.name}</h3>
-            <h2>{prompt}</h2>
+            <h2>{result+'!'}</h2>
         </div>
     )
 }

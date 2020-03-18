@@ -30,12 +30,12 @@ h1{
 }
 
 
-.winner {
+.won {
   border: 10px solid #3FA34D;
   color: #3FA34D;
 }
 
-.loser {
+.lost {
   border: 10px solid #FE654F;
   color: #FE654F;
 }
